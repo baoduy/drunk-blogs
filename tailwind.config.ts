@@ -11,9 +11,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Inter", ...defaultTheme.fontFamily.sans],
-				jakarta: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
-				mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
+				// sans: ["Inter", ...defaultTheme.fontFamily.sans],
+				// jakarta: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
+				mono: ["IBM Plex Mono", "monospace"],
 			},
 			colors: {},
 		},
