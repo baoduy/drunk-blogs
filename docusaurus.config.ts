@@ -47,13 +47,7 @@ const config: Config = {
 					// editUrl: "https://github.com/open-webui/docs/blob/main",
 					//exclude: ["**/tab-**/**"],
 				},
-				blog: {
-					showReadingTime: true,
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					// editUrl:
-					// "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-				},
+				blog: false,
 				theme: {
 					customCss: "./src/css/custom.css",
 				},
@@ -93,6 +87,7 @@ const config: Config = {
 		prism: {
 			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
+			additionalLanguages: ['csharp'],
 		},
 	} satisfies Preset.ThemeConfig,
 	plugins: [require.resolve("docusaurus-lunr-search")],

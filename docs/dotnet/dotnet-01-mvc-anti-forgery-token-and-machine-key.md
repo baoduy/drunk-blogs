@@ -1,8 +1,8 @@
 ---
-author: steven
+#author: steven
 pubDatetime: 2017-02-14T00:00:00Z
-title: "[.NET] Anti Forgery Token and Machine Key for MVC on IIS"
-postSlug: anti-forgery-token-and-machine-key-aspnet-mvc-iis
+title: "Anti Forgery Key on IIS"
+slug: anti-forgery-token-and-machine-key-aspnet-mvc-iis
 featured: false
 draft: false
 tags:
@@ -16,6 +16,8 @@ description:
   The post emphasizes the necessity of implementing both measures to enhance overall security.
 ---
 
+{/* truncate */}
+
 If you're developing using ASP.NET MVC, it's highly likely that you've come across the concept of anti-forgery tokens.
 These tokens play a critical role in bolstering the security of our web applications and safeguarding them against Cross-Site Request Forgery (CSRF) attacks.
 
@@ -28,7 +30,7 @@ To leverage this security feature in your ASP.NET MVC application, two key steps
 1. Implement the `AntiForgeryToken` method directly within the form you wish to protect.
    This method generates the token that will be validated upon form submission.
 
-```csharp
+```cs
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -39,7 +41,7 @@ To leverage this security feature in your ASP.NET MVC application, two key steps
 2. Adorn the corresponding action method in your controller with the ValidateAntiForgeryToken attribute.
    This ensures that the ASP.NET MVC framework validates the token included in the request against the token stored in the form body.
 
-```csharp
+```js
 [HttpPost]
 [ValidateAntiForgeryToken]
 public ActionResult Create(FormCollection collection)
